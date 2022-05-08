@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+  padding: 16px;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-weight: 600;
+  line-height: 1.75;
+  border-radius: 30px;
+  border: 0 none;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 238px;
+  text-decoration: none;
+
+  @include respond-below('sm'){
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  &.btn-md {
+    min-width: auto;
+    border-radius: 7px;
+    padding: 5px 20px;
+    font-weight: 400;
+  }
+
+  &.btn-primary {
+    background: transparent;
+    color: $white;
+    border: 1px solid $white;
+
+    @include on-event {
+      background-color: $white;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  &.btn-secondary {
+    background: $primary-color;
+    color: $white;
+    border: 1px solid $primary-color;
+
+    @include on-event {
+      background-color: $white;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  &.btn-default {
+    background: $orange;
+    color: $white;
+    border: 1px solid orange;
+
+    @include on-event {
+      background-color: $white;
+      color: orange;
+      text-decoration: none;
+    }
+  }
+
+  &.btn-success {
+    background: $green;
+    color: $white;
+
+    @include on-event {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &.btn-danger {
+    background: $red;
+    color: $white;
+
+    @include on-event {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &.btn-info {
+    background: $manchaster;
+    color: $white;
+
+    @include on-event {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+}
